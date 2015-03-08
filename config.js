@@ -14,9 +14,13 @@ config = {
         mail: {},
         fileStorage: false,
         database: {
-            client: 'sqlite3',
+            client: 'postgres',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
+                  host: 'ec2-23-21-183-70.compute-1.amazonaws.com',
+                  user: 'yvqnycdfsmbtem',
+                  password: 'kXp1hk-b2tuc8xfPpIXnBRotW9',
+                  database: 'd3kv8nrkl6ae28',
+                  port: '5432'
             },
             debug: false
         },
