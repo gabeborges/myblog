@@ -1,0 +1,61 @@
+.main-header-links {
+  margin-top: 20px;
+  position: relative;
+  display: block;
+}
+.header-button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: rgba(0,0,0,0.1);
+  border: white 1px solid;
+  border-radius: 35px;
+  box-sizing: border-box;
+  color: white;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  height: 38px;
+  line-height: 35px;
+  opacity: 1;
+  padding: 0 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.6s ease;
+  white-space: nowrap;
+}
+.header-button:hover {
+  background-color: white;
+  color: #000;
+
+}
+.header-icons {
+  -webkit-font-smoothing: antialiased;
+  border-radius: 35px;
+  border: white 1px solid;
+  color: white;
+  display: inline-block;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  top: 6px;
+  padding: 3px 7px 2px 8px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  transition: all 0.6s ease;
+
+}
+.header-icons:hover {
+  background-color: white;
+  color: #000;
+  outline: 0;
+}
+.header-icons.icon-behance,
+.header-icons.icon-linkedin {
+  padding: 4px 9px 1px 9px;
+  letter-spacing: 0;
+}
+
+.header-icons.icon-behance { margin-left: 10px; }
+
