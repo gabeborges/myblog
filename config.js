@@ -13,11 +13,11 @@ config = {
         url: 'http://gabrielcarpenedo.com',
         mail: {
             transport: 'SMTP',
-            option: {
+            options: {
                 service: 'Mailgun',
                 auth: {
-                    user: 'postmaster@sandboxc3704645670f42c9ad25ba7d9e2b92a7.mailgun.org',
-                    pass: 'eb7e0fbc0b237b2d1a5065990dd6dbfb'
+                    user: process.env.MAILGUN_USER,     // mailgun username
+                    pass: process.env.MAILGUN_PASSWORD  // mailgun password
                 }
             }
         },
@@ -54,8 +54,8 @@ config = {
             option: {
                 service: 'Mailgun',
                 auth: {
-                    user: 'postmaster@sandboxc3704645670f42c9ad25ba7d9e2b92a7.mailgun.org',
-                    pass: 'eb7e0fbc0b237b2d1a5065990dd6dbfb'
+                    user: process.env.MAILGUN_USER,
+                    pass: process.env.MAILGUN_PASSWORD
                 }
             }
         },
