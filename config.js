@@ -11,7 +11,17 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://gabrielcarpenedo.com',
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+            option: {
+                service: 'Mailgun',
+                auth: {
+                    user: 'postmaster@sandboxc3704645670f42c9ad25ba7d9e2b92a7.mailgun.org',
+                    pass: 'eb7e0fbc0b237b2d1a5065990dd6dbfb'
+                }
+            }
+        },
+
         fileStorage: false,
         database: {
             client: 'postgres',
@@ -39,20 +49,16 @@ config = {
         // Change this to your Ghost blogs published URL.
         url: 'http://localhost:2368',
 
-        // Example mail config
-        // Visit http://support.ghost.org/mail for instructions
-        // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
+        mail: {
+            transport: 'SMTP',
+            option: {
+                service: 'Mailgun',
+                auth: {
+                    user: 'postmaster@sandboxc3704645670f42c9ad25ba7d9e2b92a7.mailgun.org',
+                    pass: 'eb7e0fbc0b237b2d1a5065990dd6dbfb'
+                }
+            }
+        },
 
         database: {
             client: 'sqlite3',
