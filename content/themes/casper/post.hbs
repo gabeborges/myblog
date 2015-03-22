@@ -6,12 +6,13 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+<header class="main-header post-head {{#if @blog.cover}}" style="background: linear-gradient(180deg,rgba(19,106,138,.55) 30%,rgba(38,120,113,.34) 70%), url({{@blog.cover}}) no-repeat center {{else}}no-cover{{/if}}">
+    <nav class="main-nav {{#if @blog.cover}}overlay{{/if}} clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
         {{#if @blog.navigation}}
             <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
         {{/if}}
+        <a class="back-button" href="javascript:history.back()"><span class="word">Back</span></a>
     </nav>
 </header>
 
@@ -21,7 +22,8 @@
         <header class="post-header">
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                <span class="post-tags">{{tags prefix="on " separator=" "}}</span>
             </section>
         </header>
 
@@ -61,7 +63,7 @@
                 {{#if bio}}
                     <p>{{bio}}</p>
                 {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                    <p><a href="javascript:history.back()">Back to Home</a></p>
                 {{/if}}
                 <div class="author-meta">
                     {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}

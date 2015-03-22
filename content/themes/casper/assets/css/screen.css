@@ -629,6 +629,7 @@ body.nav-opened .nav {
     color: #B8B8B8;
     content: counter(item, lower-roman);
     counter-increment: item;
+    font-family: 'Open Sans', sans-serif;
 }
 .nav li {
     margin: 0;
@@ -642,6 +643,7 @@ body.nav-opened .nav {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-family: 'Open Sans', sans-serif;
 }
 .nav li a:after {
     display: inline-block;
@@ -1168,7 +1170,7 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 .post-head.main-header {
-    height: 65vh;
+    height: 45vh;
     min-height: 180px;
 }
 
@@ -1595,14 +1597,15 @@ body:not(.post-template) .post-title {
         height: 30px;
     }
 
-    .menu-button {
+    .menu-button,
+    .back-button {
         padding: 0 5px;
-        border-radius: 0;
         border-color: transparent;
         color: #2e2e2e;
-        background: transparent;
+        background: transparent!important;
     }
-    .menu-button:hover {
+    .menu-button:hover,
+    .back-button:hover {
         color: #2e2e2e;
         border-color: transparent;
         background: none;
@@ -1625,7 +1628,9 @@ body:not(.post-template) .post-title {
         border: none;
     }
 
-    .main-nav.overlay .menu-button {
+    .main-nav.overlay .menu-button,
+    .main-nav.overlay .back-button,
+    .main-nav.overlay .header-button {
         border-color: transparent;
     }
 
