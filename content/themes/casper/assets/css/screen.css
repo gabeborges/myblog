@@ -1170,8 +1170,9 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 .post-head.main-header {
-    height: 45vh;
+    height: 60vh;
     min-height: 180px;
+    background-position: center center;
 }
 
 .no-cover.post-head.main-header {
