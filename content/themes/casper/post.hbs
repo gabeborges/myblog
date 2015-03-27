@@ -6,8 +6,9 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if @blog.cover}}" style="background: linear-gradient(180deg,rgba(19,106,138,.55) 30%,rgba(38,120,113,.34) 70%), url({{@blog.cover}}) no-repeat center {{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if @blog.cover}}overlay{{/if}} clearfix">
+<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+
+    <nav class="main-nav {{#if image}}{{/if}} clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
         {{#if @blog.navigation}}
             <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
