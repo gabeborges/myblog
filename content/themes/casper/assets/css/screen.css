@@ -765,9 +765,13 @@ body.nav-opened .nav {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
-    height: 38px;
-    padding: 1px 0 5px 0;
-    width: auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -moz-border-radius: 50px;
+    margin: -6px 20px 0 0;
 }
 
 .menu-button {
@@ -885,9 +889,11 @@ body.nav-opened .menu-button .word {
     color: rgba(0,0,0,0.5);
 }
 
-.no-cover .main-nav.overlay .menu-button {
+.no-cover .main-nav.overlay .menu-button,
+.no-cover .main-nav.overlay .back-button {
     color: rgba(0,0,0,0.4);
     border-color: rgba(0,0,0,0.3);
+    background-color: transparent;
 }
 
 /* Add subtle load-in animation for content on the home page */
@@ -1626,7 +1632,8 @@ body:not(.post-template) .post-title {
     .no-cover .main-nav.overlay {
         background: none;
     }
-    .no-cover .main-nav.overlay .menu-button {
+    .no-cover .main-nav.overlay .menu-button,
+    .no-cover .main-nav.overlay .back-button {
         border: none;
     }
 
